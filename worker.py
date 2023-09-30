@@ -84,16 +84,6 @@ class Worker(object):
         self.driver.switch_to.window(self.driver.window_handles[1])
         # clicks "Best Value" option
         WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"surveys\"]/div[2]/a[1]"))).click()
-
-        # while True:
-        #     try:
-        #         WebDriverWait(self.driver, 3).until(EC.visibility_of_element_located((By.XPATH, "//*[text()='All good so far!']")))
-        #         break
-        #     except Exception:
-        #         pass
-        # WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"btn-primary\"]"))).click()
-        # while self.driver.find_element("xpath", "//*[text()='Demographics']"):
-        #     WebDriverWait(self.driver, 3).until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"btn-secondary\"]"))).click()
         
         # checks if there are no surveys currently available
         for _ in range(3):
